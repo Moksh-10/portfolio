@@ -30,7 +30,10 @@ const projectsData = {
         name: "Quantization",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/Quantization"
       },
-      
+      {
+        name: "Mixture of Experts",
+        link: "https://github.com/Moksh-10/ML-Projects/tree/main/MoE"
+      },
       {
         name: "U Net",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/U-Net"
