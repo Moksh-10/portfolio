@@ -26,7 +26,7 @@ const blogs = [
 
 const research = [
   {
-    title: "Optimizing EV Charging Infrastructure (Work in Progress)",
+    title: "Something related to EV Charging Infrastructure (Work in Progress)",
     
   },
   
