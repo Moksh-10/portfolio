@@ -16,14 +16,17 @@ const experiences = [
     title: "LLM Engineer Intern",
     company: "Arogo AI",
     date: "April 2025 – May 2025",
-    description: "Worked on Large Language Models and their applications.",
+    description: "Developed LLM-based diagnostic reasoning pipelines integrating knowledge graphs, medical ontologies,
+and rule- based validation.Optimized LLM workflows with RAG and prompt engineering to reduce hallucinations and improve
+interpretability.Prototyped an LLM - powered diagnosis assistant for reliable clinical workflow integration.",
   },
-  {
-    title: "AI Engineering Intern",
+{
+  title: "AI Engineering Intern",
     company: "Mythyaverse",
-    date: "May 2025 - June 2025",
-    description: "Developed AI-powered solutions for the metaverse.",
-  },
+      date: "May 2025 - June 2025",
+        description: "Built multimodal ML pipelines with PyTorch and HuggingFace, including custom data loaders and
+preprocessing modules.Fine - tuned LLMs using LoRA/QLoRA with gradient accumulation for efficient large-scale training. Implemented inference workflows with Docker and FastAPI, integrating automated evaluation pipelines.",
+},
 ]
 
 const blogs = [
@@ -83,6 +86,35 @@ export function AccordionSections() {
       {/* The original code had a nested Accordion here, which is incorrect.
           It should be AccordionItems directly under the main Accordion.
           Correcting this structure to be flat. */}
+
+      <AccordionItem value="experience" className="border-none">
+        <AccordionTrigger className="text-xl font-medium py-2 hover:no-underline">
+          <div className="flex items-center">
+            <ChevronRight
+              className={`mr-2 h-5 w-5 transition-transform ${openItems.includes("experience") ? "rotate-90" : ""}`}
+            />
+            Experience
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className="pl-7 pt-2">
+          <div className="space-y-6">
+            {experiences.map((exp, index) => (
+              <div key={index} className="group">
+                <div className="flex justify-between items-start mb-1">
+                  <div className="flex items-center font-medium text-gray-200">
+                    <Briefcase className="h-4 w-4 mr-2 opacity-70" />
+                    {exp.title} <span className="text-gray-500 mx-2">@</span> {exp.company}
+                  </div>
+                  <span className="text-sm text-gray-500 whitespace-nowrap ml-4">{exp.date}</span>
+                </div>
+                <p className="text-gray-400 text-sm ml-6 leading-relaxed">
+                  {exp.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </AccordionContent>
+      </AccordionItem>
 
 
       <AccordionItem value="blog" className="border-none">
@@ -150,34 +182,7 @@ export function AccordionSections() {
         </AccordionContent>
       </AccordionItem>
 
-      <AccordionItem value="experience" className="border-none">
-        <AccordionTrigger className="text-xl font-medium py-2 hover:no-underline">
-          <div className="flex items-center">
-            <ChevronRight
-              className={`mr-2 h-5 w-5 transition-transform ${openItems.includes("experience") ? "rotate-90" : ""}`}
-            />
-            Experience
-          </div>
-        </AccordionTrigger>
-        <AccordionContent className="pl-7 pt-2">
-          <div className="space-y-6">
-            {experiences.map((exp, index) => (
-              <div key={index} className="group">
-                <div className="flex justify-between items-start mb-1">
-                  <div className="flex items-center font-medium text-gray-200">
-                    <Briefcase className="h-4 w-4 mr-2 opacity-70" />
-                    {exp.title} <span className="text-gray-500 mx-2">@</span> {exp.company}
-                  </div>
-                  <span className="text-sm text-gray-500 whitespace-nowrap ml-4">{exp.date}</span>
-                </div>
-                <p className="text-gray-400 text-sm ml-6 leading-relaxed">
-                  {exp.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </AccordionContent>
-      </AccordionItem>
+
     </Accordion>
   )
 }
