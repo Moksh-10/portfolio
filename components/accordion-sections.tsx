@@ -2,13 +2,28 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ChevronRight, Calendar, FileText, Newspaper } from "lucide-react"
+import { ChevronRight, Calendar, FileText, Newspaper, Briefcase } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 // Updated projects data to match the two categories
 const projects = [
   { id: "ml-projects", title: "Machine Learning Projects" },
   { id: "side-projects", title: "Side Projects" },
+]
+
+const experiences = [
+  {
+    title: "LLM Engineer Intern",
+    company: "Arogo AI",
+    date: "April 2025 – May 2025",
+    description: "Worked on Large Language Models and their applications.",
+  },
+  {
+    title: "AI Engineering Intern",
+    company: "Mythyaverse",
+    date: "May 2025 - June 2025",
+    description: "Developed AI-powered solutions for the metaverse.",
+  },
 ]
 
 const blogs = [
@@ -27,10 +42,12 @@ const blogs = [
 const research = [
   {
     title: "Something related to EV Charging Infrastructure (Work in Progress)",
-    
+
   },
-  
+
 ]
+
+
 
 export function AccordionSections() {
   const [openItems, setOpenItems] = useState<string[]>([])
@@ -63,6 +80,11 @@ export function AccordionSections() {
         </AccordionContent>
       </AccordionItem>
 
+      {/* The original code had a nested Accordion here, which is incorrect.
+          It should be AccordionItems directly under the main Accordion.
+          Correcting this structure to be flat. */}
+
+
       <AccordionItem value="blog" className="border-none">
         <AccordionTrigger className="text-xl font-medium py-2 hover:no-underline">
           <div className="flex items-center">
@@ -80,8 +102,8 @@ export function AccordionSections() {
                   <Calendar className="h-4 w-4 mr-2" />
                   <span className="text-sm">{blog.date}</span>
                 </div>
-                <Link 
-                  href={blog.link} 
+                <Link
+                  href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors flex items-center"
@@ -127,7 +149,35 @@ export function AccordionSections() {
           </div>
         </AccordionContent>
       </AccordionItem>
+
+      <AccordionItem value="experience" className="border-none">
+        <AccordionTrigger className="text-xl font-medium py-2 hover:no-underline">
+          <div className="flex items-center">
+            <ChevronRight
+              className={`mr-2 h-5 w-5 transition-transform ${openItems.includes("experience") ? "rotate-90" : ""}`}
+            />
+            Experience
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className="pl-7 pt-2">
+          <div className="space-y-6">
+            {experiences.map((exp, index) => (
+              <div key={index} className="group">
+                <div className="flex justify-between items-start mb-1">
+                  <div className="flex items-center font-medium text-gray-200">
+                    <Briefcase className="h-4 w-4 mr-2 opacity-70" />
+                    {exp.title} <span className="text-gray-500 mx-2">@</span> {exp.company}
+                  </div>
+                  <span className="text-sm text-gray-500 whitespace-nowrap ml-4">{exp.date}</span>
+                </div>
+                <p className="text-gray-400 text-sm ml-6 leading-relaxed">
+                  {exp.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </AccordionContent>
+      </AccordionItem>
     </Accordion>
   )
 }
-
