@@ -16,17 +16,17 @@ const experiences = [
     title: "LLM Engineer Intern",
     company: "Arogo AI",
     date: "April 2025 – May 2025",
-    description: "Developed LLM-based diagnostic reasoning pipelines integrating knowledge graphs, medical ontologies,
+    description: `Developed LLM-based diagnostic reasoning pipelines integrating knowledge graphs, medical ontologies,
 and rule- based validation.Optimized LLM workflows with RAG and prompt engineering to reduce hallucinations and improve
-interpretability.Prototyped an LLM - powered diagnosis assistant for reliable clinical workflow integration.",
+interpretability.Prototyped an LLM - powered diagnosis assistant for reliable clinical workflow integration.`,
   },
-{
-  title: "AI Engineering Intern",
+  {
+    title: "AI Engineering Intern",
     company: "Mythyaverse",
-      date: "May 2025 - June 2025",
-        description: "Built multimodal ML pipelines with PyTorch and HuggingFace, including custom data loaders and
-preprocessing modules.Fine - tuned LLMs using LoRA/QLoRA with gradient accumulation for efficient large-scale training. Implemented inference workflows with Docker and FastAPI, integrating automated evaluation pipelines.",
-},
+    date: "May 2025 - June 2025",
+    description: `Built multimodal ML pipelines with PyTorch and HuggingFace, including custom data loaders and
+preprocessing modules.Fine - tuned LLMs using LoRA/QLoRA with gradient accumulation for efficient large-scale training. Implemented inference workflows with Docker and FastAPI, integrating automated evaluation pipelines.`,
+  },
 ]
 
 const blogs = [
