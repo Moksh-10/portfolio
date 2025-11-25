@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Separator } from "@/components/ui/separator"
-import { Github, Mail, Twitter } from "lucide-react"
+import { Github, Mail, Twitter, Linkedin, FileText } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
@@ -37,6 +37,14 @@ export function Footer() {
           <Link href="https://x.com/agmoksh10" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
             <Twitter className="h-5 w-5" />
             <span className="sr-only">Twitter</span>
+          </Link>
+          <Link href="https://www.linkedin.com/in/moksh-agrawal-805ab424a/" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            <Linkedin className="h-5 w-5" />
+            <span className="sr-only">LinkedIn</span>
+          </Link>
+          <Link href="https://drive.google.com/file/d/1hBvuGCgJTuepnJIDxOBCjKCYypSDBKYm/view?usp=sharing" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            <FileText className="h-5 w-5" />
+            <span className="sr-only">Resume</span>
           </Link>
         </div>
         <div className="text-gray-400">{currentTime}</div>
