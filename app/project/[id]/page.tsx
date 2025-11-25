@@ -11,6 +11,10 @@ const projectsData = {
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/Stable-Diffusion/sd"
       },
       {
+        name: "Paligemma",
+        link: "https://github.com/Moksh-10/ML-Projects/tree/main/Paligemma"
+      },
+      {
         name: "Vanilla Transformer - Machine Translation",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/Basic-Transformer"
       },
@@ -42,13 +46,20 @@ const projectsData = {
         name: "Variational Autoencoder",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/VAE"
       },
-      
+
       {
         name: "MLP-Mixer",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/MLP-Mixer"
       },
-      
-     
+      {
+        name: "Transformer without Nomalization",
+        link: "https://github.com/Moksh-10/ML-Projects/tree/main/Trnasformer%20without%20Normalization"
+      },
+      {
+        name: "Sliding Window Attention",
+        link: "https://github.com/Moksh-10/ML-Projects/tree/main/sliding%20window%20attention"
+      },
+
       {
         name: "Differential Transformer",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/Differential-Transformer"
@@ -61,15 +72,8 @@ const projectsData = {
         name: "Linformer",
         link: "https://github.com/Moksh-10/ML-Projects/tree/main/Linformer"
       },
-      {
-        name: "Various Architectures",
-        link: "https://github.com/Moksh-10/ML-Projects/tree/main/Different-Architectures"
-      },
-      {
-        name: "Basic in TF Keras",
-        link: "https://github.com/Moksh-10/ML-Projects/tree/main/tf-keras"
-      },
-      
+
+
     ]
   },
   "side-projects": {
@@ -87,7 +91,11 @@ const projectsData = {
         name: "Portfolio Website",
         link: "https://github.com/Moksh-10/portfolio"
       },
-      
+      {
+        name: "Brain Tumor Classification (Vibe Coded)",
+        link: "https://github.com/Moksh-10/Brain_Tumor_MRI_Classification"
+      },
+
       // Add more side projects here
     ]
   }
@@ -109,7 +117,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
       <div className="space-y-6">
         <h1 className="text-3xl font-bold">{category.title}</h1>
-        
+
         <div className="grid gap-4">
           {category.projects.map((project, index) => (
             <Link
