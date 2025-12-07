@@ -40,6 +40,11 @@ const blogs = [
     title: "Decoding Einsum",
     link: "https://general-share-c6c.notion.site/Decoding-Einsum-1ac1f019fccc803bb781f2de8063614a",
   },
+  {
+    date: "Dec 7, 2025",
+    title: "Simple GAN",
+    link: "https://general-share-c6c.notion.site/GAN-2c21f019fccc8040b5def2fb85c8d310?pvs=143",
+  },
 ]
 
 const research = [
